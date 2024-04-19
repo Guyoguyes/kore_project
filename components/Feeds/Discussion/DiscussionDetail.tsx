@@ -9,7 +9,8 @@ const LeftContent = () => <Avatar.Image size={40} source={require('../../../asse
 
 const DiscussionDetail = ({ route }: any) => {
   const { discussionId } = route.params;
-  const discussion = discussionsData.find(item => item.date === discussionId);
+  const discussion = []
+  discussion = discussionsData.find(item => item.date === discussionId);
 
   return (
     <ScrollView>
