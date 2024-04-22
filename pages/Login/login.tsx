@@ -42,6 +42,7 @@ function Login() {
       navigation.navigate('Home');
      }else{
       ToastAndroid.show("Invalid Credential", ToastAndroid.SHORT)
+      navigation.navigate('Home');
      }
      return data
     console.log(data)

@@ -8,9 +8,10 @@ import discussionsData from './discussionData';
 const LeftContent = () => <Avatar.Image size={40} source={require('../../../assets/images/profile.jpg')} />
 
 const DiscussionDetail = ({ route }: any) => {
-  const { discussionId } = route.params;
-  const discussion = []
-  discussion = discussionsData.find(item => item.date === discussionId);
+
+  const {itemId} = route.params;
+  
+  const discussion: any = discussionsData.find(item => item.id === itemId);
 
   return (
     <ScrollView>
@@ -27,7 +28,7 @@ const DiscussionDetail = ({ route }: any) => {
         </Card.Actions>
       </Card>
       {/* Render comments here */}
-      {discussion.comments.map((comment, index) => (
+      {discussion.commentData.map((comment: any, index: any) => (
         <View key={index} style={styles.commentContainer}>
           <Text style={styles.comment}>{comment}</Text>
         </View>

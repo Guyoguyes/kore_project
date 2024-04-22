@@ -8,6 +8,7 @@ import Home from './pages/Home/home';
 import Feeds from './pages/Feeds/feeds';
 import Login from './pages/Login/login';
 import { PaperProvider } from 'react-native-paper';
+import DiscussionDetail from './components/Feeds/Discussion/DiscussionDetail';
 
 const Stack = createNativeStackNavigator();
 
@@ -21,6 +22,7 @@ const App = () => {
       <Stack.Navigator initialRouteName="Login">
       <Stack.Screen name='Login' component={Login} options={{headerShown: false}}/>
       <Stack.Screen name='Home' component={Home} options={{headerShown: false}}/>
+      <Stack.Screen name='DiscussionDetails' component={DiscussionDetail} options={{headerShown: true}}/>
     {/* <Stack.Screen name='Feeds' component={Feeds} /> */}
   </Stack.Navigator>
 
